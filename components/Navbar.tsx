@@ -4,11 +4,15 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full h-4">
-      <div className="flex items-center h-4">pedro barbeitos</div>
-      <div className="flex justify-between w-auto gap-2 items-center h-4">
+    <div className="flex flex-wrap justify-between items-center w-full h-9">
+      <div className="flex items-center h-6">
+        <Link href="">
+          <b>pedro barbeitos</b>
+        </Link>
+      </div>
+      <div className="flex justify-between w-auto gap-3 items-center h-6">
         <Link href="">about</Link>
-        <Link href="">work</Link>
+        <Link href="">projects</Link>
         <ModeToggle />
       </div>
     </div>

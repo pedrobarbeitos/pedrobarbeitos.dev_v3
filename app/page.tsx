@@ -1,9 +1,11 @@
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <div>hello world</div>
+    <main className=" grow flex w-full flex-col items-center">
+      <section className="flex grow">hello world</section>
+      <Footer />
     </main>
   );
 }
