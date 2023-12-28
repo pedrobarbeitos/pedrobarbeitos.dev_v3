@@ -1,4 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    reactStrictMode: true,
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "i.discogs.com",
+          port: "",
+          pathname: "/**",
+        },
+        {
+          protocol: "https",
+          hostname: "image.tmdb.org",
+          port: "",
+          pathname: "/**",
+        },
+      ],
+    },
+}
 
 module.exports = nextConfig
