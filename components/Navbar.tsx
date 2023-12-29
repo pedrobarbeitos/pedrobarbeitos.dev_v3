@@ -4,7 +4,7 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full h-12 sticky top-0 bg-background ">
+    <div className="flex flex-wrap justify-between items-center w-full h-12 sticky top-0 bg-background z-10">
       <div className="flex items-center h-6">
         <Link href="/">
           <b>pedro barbeitos</b>
