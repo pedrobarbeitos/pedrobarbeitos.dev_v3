@@ -65,10 +65,7 @@ export default function FilmCollection() {
   return (
     <main className=" grow flex w-full flex-col justify-center items-center">
       <div className="flex grow flex-col items-center max-w-3xl">
-        <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-6">
-          Film Collection
-        </h4>
-        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-center">
+        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-center pt-14">
           Dive into my "Film Collection" built with data provided by the TMDB
           API. This project is a quirky crossroad of technology and my eclectic
           film taste. From sci-fi marvels to heart-wrenching dramas, it's a
