@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import styles from "./backImage.module.css";
-import A01 from "../public/01A.jpg";
-import B01 from "../public/01B.jpg";
 
 const BackImage = (props: {
   imageOne: StaticImageData;
@@ -50,6 +48,7 @@ const BackImage = (props: {
         style={tiltStyle}
       >
         <Image
+          className="object-contain invert grayscale dark:invert-0 dark:grayscale-0"
           src={props.imageOne}
           width={700}
           height={700}
@@ -64,6 +63,7 @@ const BackImage = (props: {
         style={tiltStyle}
       >
         <Image
+          className="object-contain invert grayscale dark:invert-0 dark:grayscale-0"
           src={props.imageTwo}
           width={700}
           height={700}
