@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer";
+
 import Image from "next/image";
 import Link from "next/link";
 import P01 from "/public/pgsf.png";
+import { BadgeDes } from "@/components/Badge";
 
 export default function Projects() {
   return (
@@ -31,7 +33,7 @@ export default function Projects() {
             Curated film collection
           </h4>
         </Link>
-        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-0 pb-20">
+        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-0 pb-8">
           Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my
           passion for blending technology, architecture, history, and
@@ -40,6 +42,14 @@ export default function Projects() {
           into my passion for blending technology, architecture, history, and
           creativity!
         </p>
+        <div className=" flex justify-center items-center w-full gap-2 pb-24">
+          {" "}
+          <BadgeDes badge="React" />
+          <BadgeDes badge="NextJs" />
+          <BadgeDes badge="TypeScript" />
+          <BadgeDes badge="Tailwind" />
+          <BadgeDes badge="Vercel" />
+        </div>
 
         <Image
           className="object-contain"

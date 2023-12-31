@@ -4,7 +4,7 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full h-16 sticky top-0 bg-background z-10">
+    <div className="flex flex-wrap justify-between items-center w-full h-16 sticky top-0 bg-background/80 z-10 backdrop-blur-sm">
       <div className="flex items-center h-6">
         <Link href="/">
           <h1 className="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0">
