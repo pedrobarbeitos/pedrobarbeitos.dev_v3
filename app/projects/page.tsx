@@ -1,9 +1,6 @@
 import Footer from "@/components/Footer";
-
-import Image from "next/image";
-import Link from "next/link";
 import P01 from "/public/pgsf.png";
-import { BadgeDes } from "@/components/Badge";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Projects() {
   return (
@@ -18,60 +15,67 @@ export default function Projects() {
           into my passion for blending technology, architecture, history, and
           creativity!
         </p>
-        <Link href="/projects/film-collection">
-          <Image
-            className="object-contain"
-            src={P01}
-            width={800}
-            height={800}
-            alt="Image P01"
-            priority
-          />
-        </Link>
-        <Link href="/projects/film-collection">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8">
-            Curated film collection
-          </h4>
-        </Link>
-        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-0 pb-8">
-          Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my
-          passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of
-          my web development adventures. Each project is a byte-sized glimpse
-          into my passion for blending technology, architecture, history, and
-          creativity!
-        </p>
-        <div className=" flex justify-center items-center w-full gap-2 pb-24">
-          {" "}
-          <BadgeDes badge="React" />
-          <BadgeDes badge="NextJs" />
-          <BadgeDes badge="TypeScript" />
-          <BadgeDes badge="Tailwind" />
-          <BadgeDes badge="Vercel" />
-        </div>
 
-        <Image
-          className="object-contain"
-          src={P01}
-          width={800}
-          height={800}
-          alt="Image P01"
-          priority
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="Curated film collection"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
         />
-
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8">
-          Architecture studio website
-        </h4>
-        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-0 pb-12">
-          Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my
-          passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of
-          my web development adventures. Each project is a byte-sized glimpse
-          into my passion for blending technology, architecture, history, and
-          creativity!
-        </p>
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="Architecture practice website"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
+        />
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="My record collection"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
+        />
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="Pedro's GPT"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
+        />
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="The Temples Project"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
+        />
+        <ProjectCard
+          projectImage={P01}
+          projectTitle="The Temples API"
+          projectDesc="Welcome to my digital playground, a vibrant collection of my web
+          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
+          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectLink="/projects/film-collection"
+          projectGitLink="/projects/film-collection"
+        />
       </section>
       <Footer />
     </main>
