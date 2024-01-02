@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { BadgeDes } from "@/components/Badge";
 import gitImage from "/public/github-mark.png";
 import linkImage from "/public/link.png";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 interface projectInfo {
   projectImage: StaticImageData;
@@ -15,8 +18,27 @@ interface projectInfo {
 }
 
 export default function ProjectCard(props: projectInfo) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
   return (
-    <div className="relative flex grow flex-col items-center w-full max-w-3xl">
+    <motion.div
+      ref={ref}
+      className="relative flex grow flex-col items-center w-full max-w-3xl"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.75, delay: 0.25 }}
+    >
       {" "}
       <Link href={props.projectLink}>
         <Image
@@ -61,6 +83,6 @@ export default function ProjectCard(props: projectInfo) {
           <BadgeDes key={i} badge={tech} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
