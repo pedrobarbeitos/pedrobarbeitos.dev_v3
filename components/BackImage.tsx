@@ -50,8 +50,8 @@ const BackImage = (props: {
         <Image
           className="object-contain invert grayscale dark:invert-0 dark:grayscale-0"
           src={props.imageOne}
-          width={700}
-          height={700}
+          width={900}
+          height={900}
           alt="Image A01"
           priority
         />
@@ -65,8 +65,8 @@ const BackImage = (props: {
         <Image
           className="object-contain invert grayscale dark:invert-0 dark:grayscale-0"
           src={props.imageTwo}
-          width={700}
-          height={700}
+          width={900}
+          height={900}
           alt="Image B01"
           priority
         />
