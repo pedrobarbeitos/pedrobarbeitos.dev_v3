@@ -15,6 +15,7 @@ interface projectInfo {
   projectTech: string[];
   projectLink: string;
   projectGitLink: string;
+  projectStatus: string;
 }
 
 export default function ProjectCard(props: projectInfo) {
@@ -30,7 +31,7 @@ export default function ProjectCard(props: projectInfo) {
   return (
     <motion.div
       ref={ref}
-      className="relative flex grow flex-col items-center w-full max-w-3xl"
+      className="relative flex grow flex-col items-center w-full max-w-3xl snap-start"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -50,9 +51,12 @@ export default function ProjectCard(props: projectInfo) {
           priority
         />
       </Link>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-2">
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0 ">
         {props.projectTitle}
       </h4>
+      <p className="text-sm text-muted-foreground pb-2">
+        Status: {props.projectStatus}
+      </p>
       <div className="flex relative items-center content-center gap-2 pb-0">
         <Link href={props.projectLink}>
           <Image

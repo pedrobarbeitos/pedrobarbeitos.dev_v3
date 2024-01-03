@@ -7,7 +7,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 export default function Projects() {
   return (
     <main className=" grow flex w-full flex-col items-center ">
-      <section className="relative flex grow flex-col items-center w-full max-w-3xl">
+      <section className="relative flex grow flex-col items-center w-full max-w-3xl snap-y snap-mandatory">
         <motion.p
           className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-8 pb-20"
           variants={{
@@ -36,6 +36,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="Live"
         />
         <ProjectCard
           projectImage={P01}
@@ -46,6 +47,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="In development"
         />
         <ProjectCard
           projectImage={P01}
@@ -56,6 +58,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="Live"
         />
         <ProjectCard
           projectImage={P01}
@@ -66,6 +69,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="Live"
         />
         <ProjectCard
           projectImage={P01}
@@ -76,6 +80,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="Live"
         />
         <ProjectCard
           projectImage={P01}
@@ -86,6 +91,7 @@ export default function Projects() {
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
+          projectStatus="Live"
         />
       </section>
       <Footer />
