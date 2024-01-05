@@ -42,7 +42,7 @@ const BackImage = (props: {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTopLeftOrBottomRight((prevState) => !prevState);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
