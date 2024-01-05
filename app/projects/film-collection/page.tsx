@@ -68,7 +68,7 @@ export default function FilmCollection() {
         <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-center pt-14">
           Dive into my "Film Collection" built with data provided by the TMDB
           API. This project is a quirky crossroad of technology and my eclectic
-          film taste. From sci-fi marvels to heart-wrenching dramas, it's a
+          film taste. From sci-fi marvels to heart-wrenching dramas, it&aposs a
           window into my cinematic soul. You might just find your next favorite
           film, or at least question my sense of taste!
         </p>
