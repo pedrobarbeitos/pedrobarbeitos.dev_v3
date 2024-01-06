@@ -46,7 +46,7 @@ export default function About() {
         </motion.h1>
         <motion.p
           ref={ref}
-          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify pt-2"
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6  pt-2"
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -62,7 +62,7 @@ export default function About() {
         </motion.p>
         <motion.p
           ref={ref}
-          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify "
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6  "
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -71,14 +71,14 @@ export default function About() {
           animate={mainControls}
           transition={{ duration: 0.75, delay: 0.1 }}
         >
-          These days, I work as a registered <b>UK Architect</b> (yes, real
-          buildings) and freelance Web Developer. Recently I had the privilege
+          These days, I work as a registered <b>UK Architect</b>, yes real
+          buildings, and freelance Web Developer. Recently I had the privilege
           to collaborate as a Front-End Developer for an innovative{" "}
           <b>start-up</b>.
         </motion.p>
         <motion.p
           ref={ref}
-          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify "
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6  "
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -88,8 +88,8 @@ export default function About() {
           transition={{ duration: 0.75, delay: 0.1 }}
         >
           I am always enthusiastic about embracing new challenges and
-          opportunities. If you're interested in collaborating or simply wish to
-          have a chat, please feel free to <b>reach out</b>.
+          opportunities. If you &apos;re interested in collaborating or simply
+          wish to have a chat, please feel free to <b>reach out</b>.
         </motion.p>
         <motion.div
           ref={ref}

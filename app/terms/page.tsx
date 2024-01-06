@@ -30,7 +30,7 @@ export default function Terms() {
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-6">
           Terms and Conditions
         </h3>
-        <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify">
+        <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 ">
           These terms and conditions outline the rules and regulations for the
           use of Alex Rabin&apos;s Website, located at alexrabin.com. By
           accessing this website we assume you accept these terms and
@@ -54,7 +54,7 @@ export default function Terms() {
         <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-6">
           License
         </h4>
-        <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify whitespace-pre-line">
+        <p className="leading-6 text-sm [&:not(:first-child)]:mt-6  whitespace-pre-line">
           Unless otherwise stated, Alex Rabin and/or its licensors own the
           intellectual property rights for all material on Alex Rabin. All
           intellectual property rights are reserved. You may access this from
