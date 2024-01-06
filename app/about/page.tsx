@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, useAnimation } from "framer-motion";
 import gitImage from "/public/github-mark.png";
 import linkedinImage from "/public/linkedin.png";
 import instagramImage from "/public/instagram.png";
+import { TypeAnimation } from "react-type-animation";
 
 export default function About() {
   const ref = useRef(null);
@@ -21,63 +22,132 @@ export default function About() {
 
   return (
     <main className="  flex w-full flex-col items-center">
-      <section className="flex flex-col items-center max-w-3xl justify-center">
+      <section className="flex flex-col items-center max-w-2xl justify-center">
         <motion.h1
           ref={ref}
-          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center"
+          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center min-h-32 whitespace-pre-line "
           variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.75, delay: 0.25 }}
+          transition={{ duration: 0.75, delay: 0.1 }}
         >
-          <div>Technology focussed,</div>
-          <div className="pt-2">creatively driven.</div>
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed once, initially
+              "Technology focused,\n design driven. ",
+              1000,
+            ]}
+            speed={{ type: "keyStrokeDelayInMs", value: 75 }}
+            repeat={Infinity}
+          />
         </motion.h1>
-        <p className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-8">
-          These terms and conditions outline the rules and regulations for the
-          use of Alex Rabin&aposs Website, located at alexrabin.com. By
-          accessing this website we assume you accept these terms and
-          conditions. Do not continue to use Alex Rabin if you do not agree to
-          take all of the terms and conditions stated on this page. this website
-          we assume you accept these terms and conditions. Do not continue to
-          use Alex Rabin if you do not agree to take all of the terms and
-          conditions stated on this page
-        </p>
-        <div className="flex relative items-center content-center gap-4 pb-8 pt-8 ">
-          <Link href="/">
+        <motion.p
+          ref={ref}
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify pt-2"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.75, delay: 0.1 }}
+        >
+          Back in 2016, I decided to create custom themes for an old school{" "}
+          <b>PHP based CMS</b> and tumbled headfirst into the rabbit hole of
+          coding and web development. Ever since, I&apos;ve been addicted to
+          solving complex problems through a blend of programming and design.
+        </motion.p>
+        <motion.p
+          ref={ref}
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify "
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.75, delay: 0.1 }}
+        >
+          These days, I work as a registered <b>UK Architect</b> (yes, real
+          buildings) and freelance Web Developer. Recently I had the privilege
+          to collaborate as a Front-End Developer for an innovative{" "}
+          <b>start-up</b>.
+        </motion.p>
+        <motion.p
+          ref={ref}
+          className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify "
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.75, delay: 0.1 }}
+        >
+          I am always enthusiastic about embracing new challenges and
+          opportunities. If you're interested in collaborating or simply wish to
+          have a chat, please feel free to <b>reach out</b>.
+        </motion.p>
+        <motion.div
+          ref={ref}
+          className="flex relative items-center content-center gap-4 pb-8 pt-14 "
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.75, delay: 0.1 }}
+        >
+          <Link
+            href="https://github.com/pedrobarbeitos"
+            passHref={true}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="object-contain dark:invert"
               src={gitImage}
               width={25}
               height={25}
-              alt="Pedro GitHub"
+              alt="GitHub"
               priority
             />
           </Link>
-          <Link href="/">
+          <Link
+            href="https://www.linkedin.com/in/pedrobarbeitos/"
+            passHref={true}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="object-contain dark:invert"
               src={linkedinImage}
               width={25}
               height={25}
-              alt="Pedro GitHub"
+              alt="Linkedin"
               priority
             />
           </Link>
-          <Link href="/">
+          <Link
+            href="https://www.instagram.com/pedro_barbeitos/"
+            passHref={true}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="object-contain dark:invert"
               src={instagramImage}
               width={25}
               height={25}
-              alt="Pedro GitHub"
+              alt="Instagram"
               priority
             />
           </Link>
-        </div>
+        </motion.div>
       </section>
     </main>
   );
