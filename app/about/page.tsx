@@ -25,19 +25,19 @@ export default function About() {
       <section className="flex flex-col items-center max-w-2xl justify-center">
         <motion.h1
           ref={ref}
-          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center min-h-32 whitespace-pre-line "
+          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center min-h-32 whitespace-pre-line pt-2 pb-4 "
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.75, delay: 0.1 }}
+          transition={{ duration: 0.85, delay: 0.1 }}
         >
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed once, initially
-              "Technology focused,\n design driven. ",
+              "Technology focussed,\n design driven. ",
               1000,
             ]}
             speed={{ type: "keyStrokeDelayInMs", value: 75 }}
@@ -46,7 +46,7 @@ export default function About() {
         </motion.h1>
         <motion.p
           ref={ref}
-          className="leading-6 text-sm [&:not(:first-child)]:mt-6  pt-2"
+          className="leading-6 text-sm [&:not(:first-child)]:mt-0  pt-2"
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -93,7 +93,7 @@ export default function About() {
         </motion.p>
         <motion.div
           ref={ref}
-          className="flex relative items-center content-center gap-4 pb-8 pt-14 "
+          className="flex relative items-center content-center gap-4 pb-8 pt-8 "
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
