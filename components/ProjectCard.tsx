@@ -31,7 +31,7 @@ export default function ProjectCard(props: projectInfo) {
   return (
     <motion.div
       ref={ref}
-      className="relative flex grow flex-col items-center w-full max-w-3xl snap-start"
+      className="relative flex grow flex-col items-center w-full max-w-3xl snap-start shrink-0"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },

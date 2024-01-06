@@ -14,7 +14,7 @@ export default function Navbar() {
       </div>
       <div className="flex justify-between w-auto gap-3 items-center h-6">
         <Link href="/about">about</Link>
-        <Link href="/projects">projects</Link>
+        <Link href="/projects">work</Link>
         <ModeToggle />
       </div>
     </div>

@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          " flex flex-col items-center min-h-dvh bg-background font-sans antialiased px-5 pb-4 overflow-auto",
+          " flex flex-col items-center min-h-dvh bg-background font-sans antialiased px-5 pb-4 overflow-auto justify-between ",
           fontSans.variable
         )}
       >
@@ -36,6 +37,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
