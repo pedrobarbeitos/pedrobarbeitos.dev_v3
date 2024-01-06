@@ -79,7 +79,7 @@ export default function ProjectCard(props: projectInfo) {
           />
         </Link>
       </div>
-      <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-justify pt-0 pb-6">
+      <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 pt-0 pb-6">
         {props.projectDesc}
       </p>
       <div className=" flex justify-center items-center w-full gap-2 pb-24">

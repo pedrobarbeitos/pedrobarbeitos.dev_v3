@@ -7,7 +7,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 export default function Projects() {
   return (
     <main className=" grow flex w-full flex-col items-center snap-y snap-mandatory ">
-      <section className="relative flex grow flex-col items-center w-full max-w-3xl ">
+      <section className="relative flex grow flex-col items-center w-full max-w-2xl ">
         <ProjectCard
           projectImage={P01}
           projectTitle="Curated film collection"
