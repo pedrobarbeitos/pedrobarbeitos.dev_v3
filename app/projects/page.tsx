@@ -6,8 +6,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 export default function Projects() {
   return (
-    <main className=" grow flex w-full flex-col items-center overflow-y-scroll no-scrollbar ">
-      <section className="relative flex grow flex-col items-center w-full max-w-3xl overflow-y-scroll no-scrollbar ">
+    <main className=" grow flex w-full flex-col items-center ">
+      <section className="relative flex grow flex-col items-center w-full max-w-3xl ">
         <motion.p
           className="leading-7 text-sm [&:not(:first-child)]:mt-6 text-justify pt-8 pb-20"
           variants={{
