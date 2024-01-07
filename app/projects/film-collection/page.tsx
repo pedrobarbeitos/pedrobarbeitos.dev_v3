@@ -3,18 +3,16 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import TmdbFilm from "../../models/TmdbFilm";
+import TmdbResponse from "../../models/TmdbResponse";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import { SelectFilter } from "@/components/SelectFilter";
 import { SearchInput } from "@/components/SearchInput";
 
 export default function FilmCollection() {
-  const initialPlaceholderFilms = Array(50)
-    .fill({})
-    .map((_, i) => ({
-      id: i,
-      title: "Loading...",
-      poster_path: "url",
-    }));
-  const [films, setFilms] = useState(initialPlaceholderFilms);
+  const [films, setFilms] = useState<TmdbFilm[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -36,11 +34,11 @@ export default function FilmCollection() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        const data = await response.json();
+        const data: TmdbResponse = await response.json();
         return data.items;
       } catch (error: any) {
         setError(error);
-        return;
+        return [];
       }
     };
 
@@ -74,27 +72,28 @@ export default function FilmCollection() {
         <SelectFilter />
         <SearchInput />
       </div>
-      <section
-        className="flex flex-wrap justify-center w-full gap-3 mb-8
-    "
-      >
-        {films.map((film, i) => (
-          <div key={i} className="">
-            <div className="relative h-42 w-24 overflow-hidden">
-              <Image
-                className="grayscale-[50%] hover:grayscale-0"
-                src={
-                  loading
-                    ? "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAQAAAAziH6sAAAADklEQVR42mPU+8+o9x8ABkwCXfvPaFcAAAAASUVORK5CYII="
-                    : "https://image.tmdb.org/t/p/w500" + film.poster_path
-                }
-                alt={film.title}
-                width={110}
-                height={210}
-              />
-            </div>
-          </div>
-        ))}
+      <section className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none">
+        {loading
+          ? Array(50)
+              .fill(null)
+              .map((_, i) => <Skeleton key={i} width={100} height={150} />)
+          : films.map((film) => (
+              <Link
+                href={{
+                  pathname: "/projects/film-collection/film",
+                  query: { id: film.id },
+                }}
+                key={film.id}
+              >
+                <Image
+                  className="grayscale-[50%] hover:grayscale-0"
+                  src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
+                  alt={film.title}
+                  width={100}
+                  height={150}
+                />
+              </Link>
+            ))}
       </section>
     </main>
   );

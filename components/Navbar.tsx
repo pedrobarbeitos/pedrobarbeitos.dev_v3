@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./ModeToggle";
+import { ButtonLink } from "./ButtonLink";
 
 export default function Navbar() {
   return (
@@ -13,8 +14,8 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex justify-between w-auto gap-2 sm:gap-3 items-center h-6">
-        <Link href="/about">about</Link>
-        <Link href="/projects">work</Link>
+        <ButtonLink name="about" route="about" />
+        <ButtonLink name="work" route="projects" />
         <ModeToggle />
       </div>
     </div>

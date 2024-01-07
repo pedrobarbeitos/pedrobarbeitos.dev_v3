@@ -70,10 +70,9 @@ export default function About() {
           animate={mainControls}
           transition={{ duration: 0.75, delay: 0.1 }}
         >
-          These days, I work as a registered <b>UK Architect</b>, yes real
-          buildings, and freelance Web Developer. Recently I had the privilege
-          to collaborate as a Front-End Developer for an innovative{" "}
-          <b>start-up</b>.
+          These days, I work as a registered <b>UK Architect</b> and freelance
+          Web Developer. Recently I had the privilege to collaborate as a
+          Front-End Developer for an innovative <b>start-up</b>.
         </motion.p>
         <motion.p
           ref={ref}
