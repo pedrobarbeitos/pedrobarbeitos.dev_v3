@@ -78,9 +78,15 @@ export default function FilmCollection() {
         className="flex flex-wrap justify-center w-full gap-3 mb-8
     "
       >
-        {films.map((film, i) => (
-          <div key={i} className="">
-            <div className="relative h-42 w-24 overflow-hidden">
+        {films.map((film) => (
+          <Link
+            href={{
+              pathname: "/projects/film-collection/film",
+              query: { id: film?.id },
+            }}
+            key={film.id}
+          >
+            <div className="relative h-32 w-24 overflow-hidden">
               <Image
                 className="grayscale-[50%] hover:grayscale-0"
                 src={
@@ -90,10 +96,10 @@ export default function FilmCollection() {
                 }
                 alt={film.title}
                 width={110}
-                height={210}
+                height={150}
               />
             </div>
-          </div>
+          </Link>
         ))}
       </section>
     </main>
