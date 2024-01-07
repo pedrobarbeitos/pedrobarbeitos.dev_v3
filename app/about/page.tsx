@@ -25,7 +25,7 @@ export default function About() {
       <section className="flex flex-col items-center max-w-2xl justify-center">
         <motion.h1
           ref={ref}
-          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center min-h-32 whitespace-pre-line pt-2 pb-4 "
+          className=" relative scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  min-w-45 text-center min-h-36 whitespace-pre-line pt-2 pb-2 "
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -55,10 +55,9 @@ export default function About() {
           animate={mainControls}
           transition={{ duration: 0.75, delay: 0.1 }}
         >
-          Back in 2016, I decided to create custom themes for an old school{" "}
-          <b>PHP based CMS</b> and tumbled headfirst into the rabbit hole of
-          coding and web development. Ever since, I&apos;ve been addicted to
-          solving complex problems through a blend of programming and design.
+          In 2016 I started creating custom themes for an old school{" "}
+          <b>PHP CMS</b>. I&apos;ve since been addicted to solving complex
+          problems through a blend of programming and design.
         </motion.p>
         <motion.p
           ref={ref}
@@ -88,8 +87,8 @@ export default function About() {
           transition={{ duration: 0.75, delay: 0.1 }}
         >
           I am always enthusiastic about embracing new challenges and
-          opportunities. If you &apos;re interested in collaborating or simply
-          wish to have a chat, please feel free to <b>reach out</b>.
+          opportunities. If you &apos;re interested in working together or
+          simply wish to have a chat, please feel free to <b>reach out</b>.
         </motion.p>
         <motion.div
           ref={ref}

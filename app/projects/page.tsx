@@ -13,7 +13,7 @@ export default function Projects() {
           projectTitle="Curated film collection"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          creativity!"
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
@@ -24,7 +24,7 @@ export default function Projects() {
           projectTitle="Architecture practice website"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          creativity!"
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
@@ -35,7 +35,7 @@ export default function Projects() {
           projectTitle="My record collection"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          creativity!"
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
@@ -46,7 +46,7 @@ export default function Projects() {
           projectTitle="Pedro's GPT"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          creativity! "
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
@@ -57,18 +57,7 @@ export default function Projects() {
           projectTitle="The Temples Project"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
-          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
-          projectLink="/projects/film-collection"
-          projectGitLink="/projects/film-collection"
-          projectStatus="Live"
-        />
-        <ProjectCard
-          projectImage={P01}
-          projectTitle="The Temples API"
-          projectDesc="Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! Welcome to my digital playground, a vibrant collection of my web development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity!"
+          creativity! "
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
