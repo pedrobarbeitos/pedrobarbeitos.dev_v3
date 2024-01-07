@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import TmdbFilm from "../../../../models/TmdbFilm";
 
 type Props = {
@@ -39,10 +40,26 @@ export default function Film({ searchParams }: Props) {
     fetchFilmInfo();
   }, []);
 
-  return (
-    <div>
-      <div>Film information</div>
-      <div>{film ? film.overview : "Loading film data..."}</div>
-    </div>
-  );
+  if (film) {
+    return (
+      <main className="  flex w-full flex-col items-center">
+        <section className="flex flex-col items-center max-w-2xl justify-center">
+          <Image
+            className="grayscale-[50%]"
+            src={"https://image.tmdb.org/t/p/w1280" + film.backdrop_path}
+            alt={film.title}
+            width={1280}
+            height={800}
+            priority
+          />
+          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-4 pb-0">
+            {film.title}
+          </h4>
+          <p className="leading-6 text-sm [&:not(:first-child)]:mt-0  pt-2 pb-4">
+            {film.overview}
+          </p>
+        </section>
+      </main>
+    );
+  }
 }
