@@ -11,6 +11,7 @@ interface TmdbFilm {
     genre_ids: number[];
     popularity: number;
     release_date: string;
+    tagline: string;
     video: boolean;
     vote_average: number;
     vote_count: number;

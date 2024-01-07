@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import TmdbFilm from "../../../../models/TmdbFilm";
+import { ButtonIcon } from "@/components/ButtonIcon";
 
 type Props = {
   searchParams: { id: string };
@@ -52,12 +53,14 @@ export default function Film({ searchParams }: Props) {
             height={800}
             priority
           />
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-4 pb-0">
+          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0">
             {film.title}
           </h4>
+          <p className="text-sm text-muted-foreground pb-2">{film.tagline}</p>
           <p className="leading-6 text-sm [&:not(:first-child)]:mt-0  pt-2 pb-4">
             {film.overview}
           </p>
+          <ButtonIcon />
         </section>
       </main>
     );
