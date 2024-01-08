@@ -41,7 +41,7 @@ export default async function Film({ params }: Props) {
           width={672}
           height={378}
           placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPMqgcAAVkA6zrLiF8AAAAASUVORK5CYII="
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
           priority
         />
 

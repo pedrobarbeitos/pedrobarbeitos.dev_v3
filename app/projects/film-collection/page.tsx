@@ -1,6 +1,5 @@
 import TmdbResponse from "../../models/TmdbResponse";
-import { SelectFilter } from "@/components/SelectFilter";
-import { SearchInput } from "@/components/SearchInput";
+
 import FilmGallery from "@/components/FilmGallery";
 
 const options = {
@@ -43,17 +42,6 @@ export default async function FilmCollection() {
 
   return (
     <main className=" grow flex w-full flex-col justify-center items-center">
-      <div className="flex grow flex-col items-center max-w-3xl">
-        <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 text-center ">
-          Dive into my Film Collection built with data provided by the TMDB API.
-          This project is a quirky crossroad of technology and my eclectic film
-          taste.
-        </p>
-      </div>
-      <div className="flex justify-center w-full py-10 gap-3">
-        <SelectFilter />
-        <SearchInput />
-      </div>
       <FilmGallery films={films} />
     </main>
   );
