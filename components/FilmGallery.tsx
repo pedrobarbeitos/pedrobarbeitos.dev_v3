@@ -23,15 +23,16 @@ export default function FilmGallery(props: props) {
       {films.length === 0
         ? Array(50)
             .fill(null)
-            .map((_, i) => <Skeleton key={i} width={100} height={150} />)
+            .map((_, i) => <Skeleton key={i} width={150} height={225} />)
         : films.map((film) => (
             <Link href={"/projects/film-collection/" + film.id} key={film.id}>
               <Image
-                className="grayscale-[50%] hover:grayscale-0 sm:w-[150px] sm:h-[225px] "
+                className="grayscale-[50%] hover:grayscale-0 "
                 src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
                 alt={film.title}
-                width={100}
-                height={150}
+                width={150}
+                height={225}
+                priority
               />
             </Link>
           ))}

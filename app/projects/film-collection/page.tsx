@@ -1,7 +1,4 @@
 import TmdbResponse from "../../models/TmdbResponse";
-
-import "react-loading-skeleton/dist/skeleton.css";
-
 import { SelectFilter } from "@/components/SelectFilter";
 import { SearchInput } from "@/components/SearchInput";
 import FilmGallery from "@/components/FilmGallery";
