@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,55 +8,46 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { SelectFilter } from "@/components/SelectFilter";
 import { SearchInput } from "@/components/SearchInput";
+import FilmGallery from "@/components/FilmGallery";
 
-export default function FilmCollection() {
-  const [films, setFilms] = useState<TmdbFilm[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
+  },
+};
 
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
-    },
-  };
+async function getData(page: number) {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/list/8284424?language=en-US&page=${page}`,
+    options
+  );
 
-  useEffect(() => {
-    const fetchFilms = async (page: number) => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/list/8284424?language=en-US&page=${page}`,
-          options
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data: TmdbResponse = await response.json();
-        return data.items;
-      } catch (error: any) {
-        setError(error);
-        return [];
-      }
-    };
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
-    const fetchAllFilms = async () => {
-      try {
-        const [pageOne, pageTwo, pageThree] = await Promise.all([
-          fetchFilms(1),
-          fetchFilms(2),
-          fetchFilms(3),
-        ]);
-        setFilms([...pageOne, ...pageTwo, ...pageThree]);
-      } catch (error: any) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const data: TmdbResponse = await res.json();
+  return data.items;
+}
 
-    fetchAllFilms();
-  }, []);
+async function getAllData() {
+  try {
+    const [pageOne, pageTwo, pageThree] = await Promise.all([
+      getData(1),
+      getData(2),
+      getData(3),
+    ]);
+    return [...pageOne, ...pageTwo, ...pageThree];
+  } catch (error: any) {
+    throw error;
+  }
+}
+
+export default async function FilmCollection() {
+  const films = await getAllData();
+
   return (
     <main className=" grow flex w-full flex-col justify-center items-center">
       <div className="flex grow flex-col items-center max-w-3xl">
@@ -72,23 +61,7 @@ export default function FilmCollection() {
         <SelectFilter />
         <SearchInput />
       </div>
-      <section className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none">
-        {loading
-          ? Array(50)
-              .fill(null)
-              .map((_, i) => <Skeleton key={i} width={100} height={150} />)
-          : films.map((film) => (
-              <Link href={"/projects/film-collection/" + film.id} key={film.id}>
-                <Image
-                  className="grayscale-[50%] hover:grayscale-0"
-                  src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
-                  alt={film.title}
-                  width={100}
-                  height={150}
-                />
-              </Link>
-            ))}
-      </section>
+      <FilmGallery films={films} />
     </main>
   );
 }
