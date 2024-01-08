@@ -2,14 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import TmdbFilm from "../../../../models/TmdbFilm";
+import TmdbFilm from "../../../models/TmdbFilm";
 import { ButtonIcon } from "@/components/ButtonIcon";
 
 type Props = {
-  searchParams: { id: string };
+  params: { filmId: string };
 };
 
-export default function Film({ searchParams }: Props) {
+export default function Film({ params }: Props) {
   const [error, setError] = useState(null);
   const [film, setFilm] = useState<TmdbFilm>();
   const options = {
@@ -24,7 +24,7 @@ export default function Film({ searchParams }: Props) {
     const fetchFilmInfo = async () => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${searchParams.id}?language=en-US`,
+          `https://api.themoviedb.org/3/movie/${params.filmId}?language=en-US`,
           options
         );
         if (!response.ok) {
