@@ -78,13 +78,7 @@ export default function FilmCollection() {
               .fill(null)
               .map((_, i) => <Skeleton key={i} width={100} height={150} />)
           : films.map((film) => (
-              <Link
-                href={{
-                  pathname: "/projects/film-collection/film",
-                  query: { id: film.id },
-                }}
-                key={film.id}
-              >
+              <Link href={"/projects/film-collection/" + film.id} key={film.id}>
                 <Image
                   className="grayscale-[50%] hover:grayscale-0"
                   src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
