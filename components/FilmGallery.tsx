@@ -27,7 +27,7 @@ export default function FilmGallery(props: props) {
         : films.map((film) => (
             <Link href={"/projects/film-collection/" + film.id} key={film.id}>
               <Image
-                className="grayscale-[50%] hover:grayscale-0"
+                className="grayscale-[50%] hover:grayscale-0 sm:w-[150px] sm:h-[225px] "
                 src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
                 alt={film.title}
                 width={100}

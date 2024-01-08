@@ -49,8 +49,8 @@ export default function Film({ params }: Props) {
             className="grayscale-[50%]"
             src={"https://image.tmdb.org/t/p/w1280" + film.backdrop_path}
             alt={film.title}
-            width={1280}
-            height={800}
+            width={672}
+            height={378}
             priority
           />
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0">

@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import TmdbFilm from "../../models/TmdbFilm";
 import TmdbResponse from "../../models/TmdbResponse";
-import Skeleton from "react-loading-skeleton";
+
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { SelectFilter } from "@/components/SelectFilter";
