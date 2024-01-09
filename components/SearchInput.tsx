@@ -1,5 +1,20 @@
+import React, { Dispatch, SetStateAction } from "react";
 import { Input } from "@/components/ui/input";
 
-export function SearchInput() {
-  return <Input type="search" placeholder="search by title and genre" />;
+type SearchInputProps = {
+  setSearch: Dispatch<SetStateAction<string>>;
+};
+
+export function SearchInput(props: SearchInputProps) {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    props.setSearch(event.target.value);
+  };
+
+  return (
+    <Input
+      type="search"
+      placeholder="search by title and genre"
+      onChange={handleSearch}
+    />
+  );
 }

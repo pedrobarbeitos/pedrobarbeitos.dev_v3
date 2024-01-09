@@ -41,7 +41,7 @@ export default async function FilmCollection() {
   const films = await getAllData();
 
   return (
-    <main className=" grow flex w-full flex-col justify-center items-center">
+    <main className=" flex w-full min-h-[1500px] flex-col  items-start">
       <FilmGallery films={films} />
     </main>
   );

@@ -15,14 +15,19 @@ interface props {
 
 export default function FilmGallery(props: props) {
   const [films, setFilms] = useState<TmdbFilm[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     setFilms(props.films);
   }, [props.films]);
 
+  const searchedFilms = films.filter((film) =>
+    film.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <section className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none">
-      <div className="flex grow flex-col items-center max-w-3xl">
+      <div className="flex flex-col items-start max-w-3xl">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0 ">
           Curated film collection
         </h4>
@@ -39,14 +44,14 @@ export default function FilmGallery(props: props) {
         </p>
       </div>
       <div className="flex justify-center w-full py-4 gap-3">
-        <SelectFilter />
-        <SearchInput />
+        <SelectFilter searchedFilms={searchedFilms} setFilms={setFilms} />
+        <SearchInput setSearch={setSearch} />
       </div>
       {films.length === 0
         ? Array(50)
             .fill(null)
             .map((_, i) => <Skeleton key={i} width={150} height={225} />)
-        : films.map((film) => (
+        : searchedFilms.map((film) => (
             <Link href={"/projects/film-collection/" + film.id} key={film.id}>
               <Image
                 className="grayscale-[50%] hover:grayscale-0 "

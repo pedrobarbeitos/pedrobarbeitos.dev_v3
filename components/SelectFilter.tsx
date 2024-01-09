@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { Dispatch, SetStateAction } from "react";
+import TmdbFilm from "../app/models/TmdbFilm";
 
 import {
   Select,
@@ -9,15 +10,37 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function SelectFilter() {
+type SortProps = {
+  searchedFilms: TmdbFilm[];
+  setFilms: Dispatch<SetStateAction<TmdbFilm[]>>;
+};
+
+export function SelectFilter(props: SortProps) {
+  const sortedByRating = props.searchedFilms.slice();
+  sortedByRating.sort((a, b) => b.vote_average - a.vote_average);
+
+  const sortedByRelease = props.searchedFilms.slice();
+  sortedByRelease.sort(
+    (a, b) => Date.parse(a.release_date) - Date.parse(b.release_date)
+  );
+
   return (
-    <Select>
+    <Select
+      onValueChange={(value) => {
+        if (value === "sortRating") {
+          props.setFilms(sortedByRating);
+        }
+        if (value === "sortRelease") {
+          props.setFilms(sortedByRelease);
+        }
+      }}
+    >
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Sort by" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="sortYear">Year</SelectItem>
+          <SelectItem value="sortRelease">Release date</SelectItem>
           <SelectItem value="sortRating">Rating</SelectItem>
         </SelectGroup>
       </SelectContent>
