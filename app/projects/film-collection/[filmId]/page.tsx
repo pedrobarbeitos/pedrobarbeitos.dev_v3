@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TmdbFilm from "../../../models/TmdbFilm";
 import { ButtonIcon } from "@/components/ButtonIcon";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const options = {
   method: "GET",

@@ -12,6 +12,7 @@ import {
 
 type SortProps = {
   searchedFilms: TmdbFilm[];
+  films: TmdbFilm[];
   setSearchedFilms: Dispatch<SetStateAction<TmdbFilm[]>>;
 };
 
@@ -33,6 +34,9 @@ export function SelectFilter(props: SortProps) {
         if (value === "sortRelease") {
           props.setSearchedFilms(sortedByRelease);
         }
+        if (value === "sortAdded") {
+          props.setSearchedFilms(props.films);
+        }
       }}
     >
       <SelectTrigger className="w-[180px]">
@@ -40,8 +44,9 @@ export function SelectFilter(props: SortProps) {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="sortRelease">Release date</SelectItem>
           <SelectItem value="sortRating">Rating</SelectItem>
+          <SelectItem value="sortRelease">Release Date</SelectItem>
+          <SelectItem value="sortAdded">Added Date</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

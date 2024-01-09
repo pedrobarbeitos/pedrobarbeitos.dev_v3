@@ -45,9 +45,11 @@ export default function ProjectCard(props: projectInfo) {
         <Image
           className="object-contain"
           src={props.projectImage}
-          width={800}
-          height={800}
+          width={1100}
+          height={742}
           alt={props.projectTitle}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
           priority
         />
       </Link>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TmdbFilm from "../app/models/TmdbFilm";
@@ -9,7 +9,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilter";
 import { SearchInput } from "@/components/SearchInput";
 import { ButtonIconInvert } from "./ButtonIconInvert";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 interface props {
   films: TmdbFilm[];
@@ -32,8 +32,28 @@ export default function FilmGallery(props: props) {
     setSearchedFilms(updatedSearchedFilms);
   }, [films, search]);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
-    <section className="flex flex-wrap justify-center w-full  mb-8 leading-none">
+    <motion.section
+      ref={ref}
+      className="flex flex-wrap justify-center w-full  mb-8 leading-none"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.85, delay: 0.1 }}
+    >
       <div className="flex flex-col items-center max-w-3xl justify-center">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0  ">
           Curated film collection
@@ -55,6 +75,7 @@ export default function FilmGallery(props: props) {
         <SelectFilter
           searchedFilms={searchedFilms}
           setSearchedFilms={setSearchedFilms}
+          films={films}
         />
         <SearchInput setSearch={setSearch} />
       </div>
@@ -81,6 +102,6 @@ export default function FilmGallery(props: props) {
               </motion.div>
             ))}
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
