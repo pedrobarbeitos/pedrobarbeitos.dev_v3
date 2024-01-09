@@ -8,6 +8,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilter";
 import { SearchInput } from "@/components/SearchInput";
+import { ButtonIconInvert } from "./ButtonIconInvert";
 
 interface props {
   films: TmdbFilm[];
@@ -44,6 +45,7 @@ export default function FilmGallery(props: props) {
         </p>
       </div>
       <div className="flex justify-center w-full py-4 gap-3">
+        <ButtonIconInvert />
         <SelectFilter searchedFilms={searchedFilms} setFilms={setFilms} />
         <SearchInput setSearch={setSearch} />
       </div>
