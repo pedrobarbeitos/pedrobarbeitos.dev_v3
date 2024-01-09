@@ -12,7 +12,7 @@ import {
 
 type SortProps = {
   searchedFilms: TmdbFilm[];
-  setFilms: Dispatch<SetStateAction<TmdbFilm[]>>;
+  setSearchedFilms: Dispatch<SetStateAction<TmdbFilm[]>>;
 };
 
 export function SelectFilter(props: SortProps) {
@@ -28,10 +28,10 @@ export function SelectFilter(props: SortProps) {
     <Select
       onValueChange={(value) => {
         if (value === "sortRating") {
-          props.setFilms(sortedByRating);
+          props.setSearchedFilms(sortedByRating);
         }
         if (value === "sortRelease") {
-          props.setFilms(sortedByRelease);
+          props.setSearchedFilms(sortedByRelease);
         }
       }}
     >

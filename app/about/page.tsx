@@ -21,7 +21,7 @@ export default function About() {
   }, [isInView]);
 
   return (
-    <main className="  flex w-full flex-col items-center">
+    <main className="  flex w-full h-full flex-col items-center">
       <section className="flex flex-col items-center max-w-2xl justify-center">
         <motion.h1
           ref={ref}
