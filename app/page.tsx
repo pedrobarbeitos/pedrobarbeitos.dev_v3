@@ -1,4 +1,4 @@
-import BackImage from "@/components/BackImage";
+import BackImage from "@/components/BackImage/BackImage";
 import A01 from "/public/01A.jpg";
 import B01 from "/public/01B.jpg";
 
