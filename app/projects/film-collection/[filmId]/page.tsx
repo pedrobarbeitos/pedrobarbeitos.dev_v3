@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TmdbFilm from "../../../models/TmdbFilm";
-import { ButtonIcon } from "@/components/ButtonIcon";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { ButtonIcon } from "@/components/ReturnButton";
+import FilmCard from "@/components/FilmCard";
 
 const options = {
   method: "GET",
@@ -33,28 +33,8 @@ export default async function Film({ params }: Props) {
   const film: TmdbFilm = await getData(filmID);
 
   return (
-    <main className="  flex w-full flex-col items-center">
-      <section className="flex flex-col items-center max-w-2xl justify-center">
-        <Image
-          className="grayscale-[50%]"
-          src={"https://image.tmdb.org/t/p/w1280" + film.backdrop_path}
-          alt={film.title}
-          width={672}
-          height={378}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
-          priority
-        />
-
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0">
-          {film.title}
-        </h4>
-        <p className="text-sm text-muted-foreground pb-2">{film.tagline}</p>
-        <p className="leading-6 text-sm [&:not(:first-child)]:mt-0  pt-2 pb-4">
-          {film.overview}
-        </p>
-        <ButtonIcon />
-      </section>
+    <main className="flex w-full flex-col items-center">
+      <FilmCard film={film} />
     </main>
   );
 }

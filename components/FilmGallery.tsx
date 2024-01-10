@@ -47,8 +47,8 @@ export default function FilmGallery(props: props) {
       ref={ref}
       className="flex flex-wrap justify-center w-full  mb-8 leading-none"
       variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
       }}
       initial="hidden"
       animate={mainControls}
