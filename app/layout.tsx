@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AppProvider } from "@/lib/AppContext";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,9 +36,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <AppProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </AppProvider>
         </ThemeProvider>
       </body>
     </html>
