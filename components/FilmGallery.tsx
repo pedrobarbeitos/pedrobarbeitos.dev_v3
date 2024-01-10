@@ -70,7 +70,7 @@ export default function FilmGallery(props: props) {
           </Link>
         </p>
       </div>
-      <div className="flex justify-center w-full pb-8 pt-4 gap-3">
+      <div className="flex justify-center w-full pb-8 pt-4 gap-1 sm:gap-3">
         <ButtonIconInvert
           searchedFilms={searchedFilms}
           setSearchedFilms={setSearchedFilms}
