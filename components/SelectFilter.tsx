@@ -11,7 +11,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function SelectFilter() {
+type props = {
+  originalFilms: TmdbFilm[];
+};
+
+export function SelectFilter(props: props) {
   const { searchedFilms, setSearchedFilms } = useAppContext();
   const sortedByRating = searchedFilms.slice();
   sortedByRating.sort((a, b) => b.vote_average - a.vote_average);
@@ -31,7 +35,7 @@ export function SelectFilter() {
           setSearchedFilms(sortedByRelease);
         }
         if (value === "sortAdded") {
-          setSearchedFilms(searchedFilms);
+          setSearchedFilms(props.originalFilms);
         }
       }}
     >

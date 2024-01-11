@@ -27,16 +27,9 @@ export default function FilmGallery(props: props) {
     }
   }, [props.films, searchedFilms, setSearchedFilms]);
 
-  useEffect(() => {
-    if (search) {
-      const updatedSearchedFilms = searchedFilms.filter((film) =>
-        film.title.toLowerCase().includes(search.toLowerCase())
-      );
-      setSearchedFilms(updatedSearchedFilms);
-    } else {
-      setSearchedFilms(props.films);
-    }
-  }, [search]);
+  const updatedSearchedFilms = searchedFilms.filter((film) =>
+    film.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -78,18 +71,18 @@ export default function FilmGallery(props: props) {
       </div>
       <div className="flex justify-center w-full pb-8 pt-4 gap-1 sm:gap-3">
         <ButtonIconInvert />
-        <SelectFilter />
+        <SelectFilter originalFilms={props.films} />
         <SearchInput setSearch={setSearch} />
       </div>
       <motion.div
         layout
         className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none"
       >
-        {searchedFilms.length === 0
+        {updatedSearchedFilms.length === 0
           ? Array(50)
               .fill(null)
               .map((_, i) => <Skeleton key={i} width={150} height={225} />)
-          : searchedFilms.map((film) => (
+          : updatedSearchedFilms.map((film) => (
               <motion.div key={film.id} layout>
                 <Link href={`/projects/film-collection/${film.id}`}>
                   <Image
