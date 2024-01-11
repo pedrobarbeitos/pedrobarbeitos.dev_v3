@@ -1,6 +1,5 @@
 import Image from "next/image";
 import TmdbFilm from "../../../models/TmdbFilm";
-import { ButtonIcon } from "@/components/ReturnButton";
 import FilmCard from "@/components/FilmCard";
 
 const options = {
