@@ -2,18 +2,15 @@ import React, { useState, Dispatch, SetStateAction } from "react";
 import TmdbFilm from "../app/models/TmdbFilm";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowUp } from "lucide-react";
+import { useAppContext } from "@/lib/AppContext";
 
-type OrderProps = {
-  searchedFilms: TmdbFilm[];
-  setSearchedFilms: Dispatch<SetStateAction<TmdbFilm[]>>;
-};
-
-export function ButtonIconInvert(props: OrderProps) {
+export function ButtonIconInvert() {
+  const { searchedFilms, setSearchedFilms } = useAppContext();
   const [isAscending, setIsAscending] = useState(true);
 
   const swapOrder = () => {
-    const swappedFilms = props.searchedFilms.slice().reverse();
-    props.setSearchedFilms(swappedFilms);
+    const swappedFilms = searchedFilms.slice().reverse();
+    setSearchedFilms(swappedFilms);
 
     setIsAscending(!isAscending);
   };
