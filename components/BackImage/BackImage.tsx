@@ -42,7 +42,7 @@ const BackImage = (props: {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTopLeftOrBottomRight((prevState) => !prevState);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -60,7 +60,7 @@ const BackImage = (props: {
           src={props.imageOne}
           width={900}
           height={900}
-          alt="Image A01"
+          alt="Pedro Scanned Face One"
           priority
         />
       </div>
@@ -75,7 +75,7 @@ const BackImage = (props: {
           src={props.imageTwo}
           width={900}
           height={900}
-          alt="Image B01"
+          alt="Pedro Scanned Face Two"
           priority
         />
       </div>

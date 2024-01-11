@@ -78,7 +78,7 @@ export default function FilmGallery(props: props) {
         layout
         className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none"
       >
-        {updatedSearchedFilms.length === 0
+        {updatedSearchedFilms.length === 0 && search.length === 0
           ? Array(50)
               .fill(null)
               .map((_, i) => <Skeleton key={i} width={150} height={225} />)

@@ -47,9 +47,11 @@ function FilmCard(props: props) {
         {props.film.title}
       </h4>
       <p className="text-sm text-muted-foreground pb-2">{props.film.tagline}</p>
+
       <p className="leading-6 text-sm [&:not(:first-child)]:mt-0  pt-2 pb-4">
         {props.film.overview}
       </p>
+
       <ReturnButton />
     </motion.section>
   );
