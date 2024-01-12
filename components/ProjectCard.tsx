@@ -44,25 +44,23 @@ export default function ProjectCard(props: projectInfo) {
       {" "}
       <div className="w-full flex flex-row justify-between gap-3 grow-0 ">
         {" "}
-        <div className="w-auto aspect-[3/4.2] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
+        <div className="w-auto aspect-[3/4.1] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
           <Image
             className="object-fill rounded-[8px] sm:rounded-lg  "
             src={props.projectImage_01}
             width={306}
             height={425}
             alt={props.projectTitle}
-            placeholder="blur"
             priority
           />
         </div>
-        <div className="w-auto aspect-[3/4.2] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
+        <div className="w-auto aspect-[3/4.1] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
           <Image
             className="object-fill rounded-[8px] sm:rounded-lg "
             src={props.projectImage_02}
             width={306}
             height={425}
             alt={props.projectTitle}
-            placeholder="blur"
             priority
           />
         </div>
