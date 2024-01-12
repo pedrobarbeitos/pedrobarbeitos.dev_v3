@@ -18,7 +18,6 @@ interface props {
 
 export default function FilmGallery(props: props) {
   const { searchedFilms, setSearchedFilms } = useAppContext();
-  console.log(searchedFilms);
   const [search, setSearch] = useState("");
 
   useEffect(() => {

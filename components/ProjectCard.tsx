@@ -9,7 +9,8 @@ import linkImage from "/public/link.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 interface projectInfo {
-  projectImage: StaticImageData;
+  projectImage_01: StaticImageData;
+  projectImage_02: StaticImageData;
   projectTitle: string;
   projectDesc: string;
   projectTech: string[];
@@ -31,7 +32,7 @@ export default function ProjectCard(props: projectInfo) {
   return (
     <motion.div
       ref={ref}
-      className="relative flex grow flex-col items-center w-full max-w-3xl snap-start shrink-0"
+      className="relative flex  flex-col items-center w-full max-w-3xl snap-start shrink-0"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -41,19 +42,32 @@ export default function ProjectCard(props: projectInfo) {
       transition={{ duration: 0.75, delay: 0.25 }}
     >
       {" "}
-      <Link href={props.projectLink}>
-        <Image
-          className="object-contain"
-          src={props.projectImage}
-          width={1100}
-          height={742}
-          alt={props.projectTitle}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
-          priority
-        />
-      </Link>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0 ">
+      <div className="w-full flex flex-row justify-between gap-3 grow-0 ">
+        {" "}
+        <div className="w-auto aspect-[3/4.3] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
+          <Image
+            className="object-fill rounded-lg "
+            src={props.projectImage_01}
+            width={500}
+            height={800}
+            alt={props.projectTitle}
+            placeholder="blur"
+            priority
+          />
+        </div>
+        <div className="w-auto aspect-[3/4.3] sm:border-[12px] border-[8px] border-gray-900 sm:rounded-[21px] rounded-[12px] bg-whiteback flex flex-col items-end justify-end">
+          <Image
+            className="object-fill rounded-lg "
+            src={props.projectImage_02}
+            width={500}
+            height={800}
+            alt={props.projectTitle}
+            placeholder="blur"
+            priority
+          />
+        </div>
+      </div>
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-6 pb-0 ">
         {props.projectTitle}
       </h4>
       <p className="text-sm text-muted-foreground pb-2">
