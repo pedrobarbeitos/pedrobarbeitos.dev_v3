@@ -8,7 +8,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilterRecords";
 import { SearchInput } from "@/components/SearchInput";
-import { ButtonIconInvert } from "./ButtonIconInvert";
+import { ButtonIconInvertRecords } from "./ButtonIconInvertRecords";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useAppContext } from "@/lib/AppContext";
 
@@ -69,7 +69,7 @@ export default function FilmGallery(props: props) {
         </p>
       </div>
       <div className="flex justify-center w-full pb-8 pt-4 gap-1 sm:gap-3">
-        <ButtonIconInvert />
+        <ButtonIconInvertRecords />
         <SelectFilter originalRecords={props.records} />
         <SearchInput setSearch={setSearch} />
       </div>

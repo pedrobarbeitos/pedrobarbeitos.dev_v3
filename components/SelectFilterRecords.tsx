@@ -40,7 +40,7 @@ export function SelectFilter(props: props) {
       <SelectContent>
         <SelectGroup>
           <SelectItem value="sortRelease">Release Date</SelectItem>
-          <SelectItem value="sortArstist">Artist</SelectItem>
+          <SelectItem value="sortArtist">Artist</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

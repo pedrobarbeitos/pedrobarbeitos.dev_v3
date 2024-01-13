@@ -8,7 +8,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilterFilms";
 import { SearchInput } from "@/components/SearchInput";
-import { ButtonIconInvert } from "./ButtonIconInvert";
+import { ButtonIconInvert } from "./ButtonIconInvertFilms";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useAppContext } from "@/lib/AppContext";
 
