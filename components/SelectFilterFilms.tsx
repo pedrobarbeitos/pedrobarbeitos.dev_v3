@@ -34,7 +34,7 @@ export function SelectFilter(props: props) {
         if (value === "sortRelease") {
           setSearchedFilms(sortedByRelease);
         }
-        if (value === "sortAdded") {
+        if (value === "sortName") {
           setSearchedFilms(props.originalFilms);
         }
       }}
@@ -46,7 +46,7 @@ export function SelectFilter(props: props) {
         <SelectGroup>
           <SelectItem value="sortRating">Rating</SelectItem>
           <SelectItem value="sortRelease">Release Date</SelectItem>
-          <SelectItem value="sortAdded">Added Date</SelectItem>
+          <SelectItem value="sortName">Film Name</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
