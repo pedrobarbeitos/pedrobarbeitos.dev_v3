@@ -86,14 +86,16 @@ export default function FilmGallery(props: props) {
                 <Link
                   href={`/projects/record-collection/${record.basic_information.id}`}
                 >
-                  <Image
-                    className="grayscale-[50%] hover:grayscale-0"
-                    src={record.basic_information.cover_image}
-                    alt={record.basic_information.title}
-                    width={150}
-                    height={150}
-                    priority
-                  />
+                  <div className="w-[150px] h-[150px] relative">
+                    <Image
+                      className="grayscale-[50%] hover:grayscale-0 "
+                      src={record.basic_information.cover_image}
+                      alt={record.basic_information.title}
+                      fill
+                      sizes="(max-width: 150px) 100vw"
+                      priority
+                    />
+                  </div>
                 </Link>
               </motion.div>
             ))}

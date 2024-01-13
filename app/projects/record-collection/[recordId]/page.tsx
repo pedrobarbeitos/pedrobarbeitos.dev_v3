@@ -2,6 +2,7 @@ import DiscogResponse from "@/app/models/DiscogResponse";
 import { ReturnButton } from "@/components/ReturnButton";
 import retrieveRecords from "@/lib/retrieveRecords";
 import getItunesData from "@/lib/getItunesData";
+import AlbumCard from "@/components/AlbumCard";
 
 type Props = {
   params: { recordId: string };
@@ -34,19 +35,10 @@ export default async function RecordPage({ params }: Props) {
 
   return (
     <main className="flex w-full flex-col items-center">
-      <iframe
-        allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-        height="450"
-        style={{
-          width: "100%",
-          overflow: "hidden",
-          backgroundColor: "transparent",
-          borderRadius: "11px",
-        }}
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src={`https://embed.music.apple.com/us/album/${result.collectionId}?app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=system`}
-      ></iframe>
-      <ReturnButton />
+      <section className="flex flex-col items-center max-w-3xl justify-center">
+        <AlbumCard albumId={result.collectionId} />
+        <ReturnButton />
+      </section>
     </main>
   );
 }

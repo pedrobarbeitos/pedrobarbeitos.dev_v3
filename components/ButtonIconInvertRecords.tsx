@@ -1,5 +1,4 @@
-import React, { useState, Dispatch, SetStateAction } from "react";
-import TmdbFilm from "../app/models/TmdbFilm";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { useAppContext } from "@/lib/AppContext";
