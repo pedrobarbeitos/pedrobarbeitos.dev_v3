@@ -4,6 +4,7 @@ interface DiscogRecord {
     date_added: string;
     rating: 0;
     basic_information: BasicInformation;
+    folder_id: number;
   }
   
   interface BasicInformation {

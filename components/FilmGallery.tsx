@@ -6,9 +6,9 @@ import Link from "next/link";
 import TmdbFilm from "../app/models/TmdbFilm";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { SelectFilter } from "@/components/SelectFilter";
+import { SelectFilter } from "@/components/SelectFilterFilms";
 import { SearchInput } from "@/components/SearchInput";
-import { ButtonIconInvert } from "./ButtonIconInvert";
+import { ButtonIconInvertFilms } from "./ButtonIconInvertFilms";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useAppContext } from "@/lib/AppContext";
 
@@ -30,26 +30,15 @@ export default function FilmGallery(props: props) {
     film.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
-
   return (
     <motion.section
-      ref={ref}
       className="flex flex-wrap justify-center w-full mb-8 leading-none"
       variants={{
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
       }}
       initial="hidden"
-      animate={mainControls}
+      animate="visible"
       transition={{ duration: 0.85, delay: 0.1 }}
     >
       <div className="flex flex-col items-center max-w-3xl justify-center">
@@ -69,7 +58,7 @@ export default function FilmGallery(props: props) {
         </p>
       </div>
       <div className="flex justify-center w-full pb-8 pt-4 gap-1 sm:gap-3">
-        <ButtonIconInvert />
+        <ButtonIconInvertFilms />
         <SelectFilter originalFilms={props.films} />
         <SearchInput setSearch={setSearch} />
       </div>

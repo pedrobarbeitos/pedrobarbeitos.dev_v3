@@ -17,8 +17,8 @@ export default function Projects() {
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity! Each project is a byte-sized glimpse into my passion for blending technology."
           projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
-          projectLink="/projects/film-collection"
-          projectGitLink="/projects/film-collection"
+          projectLink="/projects/record-collection"
+          projectGitLink="/projects/record-collection"
           projectStatus="Live"
         />
         <ProjectCard
