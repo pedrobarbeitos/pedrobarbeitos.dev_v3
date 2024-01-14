@@ -49,7 +49,9 @@ export default function ProjectCard(props: projectInfo) {
             className="object-fill rounded-[8px] sm:rounded-lg  "
             src={props.projectImage_01}
             width={306}
-            height={425}
+            height={442}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
             alt={props.projectTitle}
             priority
           />
@@ -59,7 +61,9 @@ export default function ProjectCard(props: projectInfo) {
             className="object-fill rounded-[8px] sm:rounded-lg "
             src={props.projectImage_02}
             width={306}
-            height={425}
+            height={442}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
             alt={props.projectTitle}
             priority
           />

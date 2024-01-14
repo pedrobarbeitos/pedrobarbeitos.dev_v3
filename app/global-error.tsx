@@ -20,8 +20,8 @@ export default function Error({
         Oops!
       </h1>
       <h2 className="pb-8 text-center">
-        Not all records in my collection can be found on the Apple Music
-        Database. Please go back and select a different album.
+        There was error while trying to load this page. Please go back or try
+        refreshing the page.
       </h2>
       <ReturnButton />
     </div>

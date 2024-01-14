@@ -1,3 +1,5 @@
+import record_collection_01 from "/public/record_collection_01.jpg";
+import record_collection_02 from "/public/record_collection_02.jpg";
 import film_collection_01 from "/public/film_collection_01.jpg";
 import film_collection_02 from "/public/film_collection_02.jpg";
 import architecture_practice_01 from "/public/architecture_practice_01.jpg";
@@ -11,8 +13,8 @@ export default function Projects() {
     <main className=" grow flex w-full flex-col items-center snap-y snap-mandatory ">
       <section className="relative flex grow flex-col items-center w-full max-w-2xl pt-10 ">
         <ProjectCard
-          projectImage_01={film_collection_01}
-          projectImage_02={film_collection_02}
+          projectImage_01={record_collection_01}
+          projectImage_02={record_collection_02}
           projectTitle="My record collection"
           projectDesc="Welcome to my digital playground, a vibrant collection of my web
           development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity! Each project is a byte-sized glimpse into my passion for blending technology."
