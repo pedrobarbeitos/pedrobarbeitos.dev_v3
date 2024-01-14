@@ -1,4 +1,3 @@
-import DiscogResponse from "@/app/models/DiscogResponse";
 import { ReturnButton } from "@/components/ReturnButton";
 import retrieveRecords from "@/lib/retrieveRecords";
 import getItunesData from "@/lib/getItunesData";

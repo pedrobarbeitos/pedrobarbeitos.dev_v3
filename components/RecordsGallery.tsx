@@ -52,7 +52,7 @@ export default function FilmGallery(props: props) {
       animate={mainControls}
       transition={{ duration: 0.85, delay: 0.1 }}
     >
-      <div className="flex flex-col items-center max-w-3xl justify-center">
+      <div className="flex flex-col items-center w-full justify-center">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight pt-8 pb-0">
           My record collection
         </h4>
@@ -75,7 +75,7 @@ export default function FilmGallery(props: props) {
       </div>
       <motion.div
         layout
-        className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none"
+        className="flex flex-wrap justify-center w-[1100px] gap-3 mb-8 leading-none"
       >
         {updatedSearchedRecords.length === 0 && search.length === 0
           ? Array(50)

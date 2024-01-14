@@ -64,7 +64,7 @@ export default function FilmGallery(props: props) {
       </div>
       <motion.div
         layout
-        className="flex flex-wrap justify-center w-full gap-3 mb-8 leading-none"
+        className="flex flex-wrap justify-center w-[1100px] gap-3 mb-8 leading-none"
       >
         {updatedSearchedFilms.length === 0 && search.length === 0
           ? Array(50)
