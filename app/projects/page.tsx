@@ -16,9 +16,8 @@ export default function Projects() {
           projectImage_01={record_collection_01}
           projectImage_02={record_collection_02}
           projectTitle="My record collection"
-          projectDesc="Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity! Each project is a byte-sized glimpse into my passion for blending technology."
-          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectDesc="Explore my record collection! Using the Discogs API and Apple Music this project offers a digital window into my musical world, allowing you to discover and listen to my collection in a modern, interactive way. Flip through the records and hit play to listen."
+          projectTech={["NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/record-collection"
           projectGitLink="/projects/record-collection"
           projectStatus="Live"
@@ -27,9 +26,8 @@ export default function Projects() {
           projectImage_01={architecture_practice_01}
           projectImage_02={architecture_practice_02}
           projectTitle="Architecture practice website"
-          projectDesc="Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and creativity! Each project is a byte-sized glimpse into my passion for blending technology."
-          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectDesc="A digital portfolio for a London based architectural practice, showcasing latest projects and reflecting their commitment to exceptional design. With a user-friendly layout, visitors can effortlessly navigate through most recent works, gaining insights into their unique architectural approach."
+          projectTech={["NextJs", "TypeScript", "Sass", "Resend", "CPanel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
           projectStatus="In development"
@@ -39,10 +37,8 @@ export default function Projects() {
           projectImage_01={film_collection_01}
           projectImage_02={film_collection_02}
           projectTitle="Curated film collection"
-          projectDesc="Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity! "
-          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectDesc="Dive into a carefully curated collection of films, constantly updated and maintained. With this selection, you'll never struggle to find a great film for your Friday nights. Explore, discover, and enjoy cinematic gems, all in one user-friendly and dynamic interface. "
+          projectTech={["NextJs", "TypeScript", "Tailwind", "Vercel"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
           projectStatus="Live"
@@ -50,11 +46,9 @@ export default function Projects() {
         <ProjectCard
           projectImage_01={temples_01}
           projectImage_02={temples_02}
-          projectTitle="The Temples project"
-          projectDesc="Welcome to my digital playground, a vibrant collection of my web
-          development adventures. Each project is a byte-sized glimpse into my passion for blending technology, architecture, history, and
-          creativity!"
-          projectTech={["React", "NextJs", "TypeScript", "Tailwind", "Vercel"]}
+          projectTitle="Temples"
+          projectDesc="This ongoing project showcases all known ancient Greek temples. Inspired by a recent trip to Greece, this endeavor features a meticulously crafted database and REST API, providing access to detailed information about these architectural marvels. "
+          projectTech={["Express", "MongoDB", "NextJs", "TypeScript", "AWS"]}
           projectLink="/projects/film-collection"
           projectGitLink="/projects/film-collection"
           projectStatus="In development"

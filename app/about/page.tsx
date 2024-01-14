@@ -37,7 +37,7 @@ export default function About() {
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed once, initially
-              "Technology focussed,\n design driven. ",
+              "Technology focussed,\n creatively driven. ",
               1000,
             ]}
             speed={{ type: "keyStrokeDelayInMs", value: 75 }}
@@ -55,9 +55,10 @@ export default function About() {
           animate={mainControls}
           transition={{ duration: 0.75, delay: 0.1 }}
         >
-          In 2016 I started creating custom themes for an old school{" "}
-          <b>PHP CMS</b>. I&apos;ve since been addicted to solving complex
-          problems through a blend of programming and design.
+          My journey in web development began in 2014 when I started creating
+          custom themes for an old school web-based <b>CMS</b>. This marked the
+          start of my ongoing pursuit to embrace increasingly complex
+          programming challenges.
         </motion.p>
         <motion.p
           ref={ref}
@@ -72,7 +73,7 @@ export default function About() {
         >
           These days, I work as a registered <b>UK Architect</b> and freelance
           Web Developer. Recently I had the privilege to collaborate as a
-          Front-End Developer for an innovative <b>start-up</b>.
+          Frontend Developer in the development of a <b>B2B web product</b>.
         </motion.p>
         <motion.p
           ref={ref}

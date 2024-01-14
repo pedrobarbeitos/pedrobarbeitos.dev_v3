@@ -10,5 +10,11 @@ export function SearchInput(props: SearchInputProps) {
     props.setSearch(event.target.value);
   };
 
-  return <Input type="search" placeholder="search" onChange={handleSearch} />;
+  return (
+    <Input
+      type="search"
+      placeholder="search by title"
+      onChange={handleSearch}
+    />
+  );
 }

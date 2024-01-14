@@ -27,6 +27,7 @@ export function SelectFilter(props: props) {
 
   return (
     <Select
+      defaultValue="sortName"
       onValueChange={(value) => {
         if (value === "sortRating") {
           setSearchedFilms(sortedByRating);
@@ -46,7 +47,7 @@ export function SelectFilter(props: props) {
         <SelectGroup>
           <SelectItem value="sortRating">Rating</SelectItem>
           <SelectItem value="sortRelease">Release Date</SelectItem>
-          <SelectItem value="sortName">Film Name</SelectItem>
+          <SelectItem value="sortName">Title</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

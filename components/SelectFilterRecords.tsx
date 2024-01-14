@@ -25,6 +25,7 @@ export function SelectFilter(props: props) {
 
   return (
     <Select
+      defaultValue="sortArtist"
       onValueChange={(value) => {
         if (value === "sortRelease") {
           setSearchedRecords(sortedByRelease);
