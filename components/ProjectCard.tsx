@@ -76,7 +76,12 @@ export default function ProjectCard(props: projectInfo) {
         Status: {props.projectStatus}
       </p>
       <div className="flex relative items-center content-center gap-2 pb-0">
-        <Link href={props.projectLink}>
+        <Link
+          href={props.projectLink}
+          passHref={true}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             className="object-contain dark:invert"
             src={linkImage}
@@ -86,7 +91,12 @@ export default function ProjectCard(props: projectInfo) {
             priority
           />
         </Link>
-        <Link href={props.projectLink}>
+        <Link
+          href={props.projectGitLink}
+          passHref={true}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             className="object-contain dark:invert"
             src={gitImage}

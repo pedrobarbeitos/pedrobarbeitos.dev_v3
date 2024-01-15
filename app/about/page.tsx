@@ -56,9 +56,11 @@ export default function About() {
           transition={{ duration: 0.75, delay: 0.1 }}
         >
           My journey in web development began in 2014 when I started creating
-          custom themes for an old school web-based <b>CMS</b>. This marked the
-          start of my ongoing pursuit to embrace increasingly complex
-          programming challenges.
+          custom themes for an old school web-based{" "}
+          <a href="https://www.indexhibit.org/about/" target="_blank">
+            <b>CMS</b>
+          </a>
+          .
         </motion.p>
         <motion.p
           ref={ref}
@@ -73,7 +75,11 @@ export default function About() {
         >
           These days, I work as a registered <b>UK Architect</b> and freelance
           Web Developer. Recently I had the privilege to collaborate as a
-          Frontend Developer in the development of a <b>B2B web product</b>.
+          Frontend Developer in the development of a{" "}
+          <a href="https://stockwised.com/" target="_blank">
+            <b>B2B web product</b>
+          </a>
+          .
         </motion.p>
         <motion.p
           ref={ref}
@@ -88,7 +94,11 @@ export default function About() {
         >
           I am always enthusiastic about embracing new challenges and
           opportunities. If you &apos;re interested in working together or
-          simply wish to have a chat, please feel free to <b>reach out</b>.
+          simply wish to have a chat, please feel free to{" "}
+          <a href="mailto: barbeitos.pedro@gmail.com">
+            <b>reach out</b>
+          </a>{" "}
+          .
         </motion.p>
         <motion.div
           ref={ref}
