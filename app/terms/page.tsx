@@ -32,8 +32,8 @@ export default function Terms() {
         </h3>
         <p className="leading-6 text-sm [&:not(:first-child)]:mt-6 ">
           These terms and conditions outline the rules and regulations for the
-          use of Pedro Barbeitos&apos;s Website, located at alexrabin.com. By
-          accessing this website we assume you accept these terms and
+          use of Pedro Barbeitos&apos;s Website, located at pedrobarbeitos.dev.
+          By accessing this website we assume you accept these terms and
           conditions. Do not continue to use this website if you do not agree to
           take all of the terms and conditions stated on this page. The
           following terminology applies to these Terms and Conditions, Privacy
@@ -60,7 +60,7 @@ export default function Terms() {
           intellectual property rights are reserved. You may access this from
           Pedro Barbeitos for your own personal use subjected to restrictions
           set in these terms and conditions. You must not: Republish material
-          from Alex Rabin Sell, rent or sub-license material from Pedro
+          from Pedro BArbeitos Sell, rent or sub-license material from Pedro
           Barbeitos Reproduce, duplicate or copy material from Pedro Barbeitos
           Redistribute content from Pedro Barbeitos This Agreement shall begin
           on the date hereof. Our Terms and Conditions were created with the
