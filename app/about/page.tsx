@@ -73,9 +73,9 @@ export default function About() {
           animate={mainControls}
           transition={{ duration: 0.75, delay: 0.1 }}
         >
-          These days, I work as a registered <b>UK Architect</b> and freelance
-          Web Developer. Recently I had the privilege to collaborate as a
-          Frontend Developer in the development of a{" "}
+          These days, I work as a freelance Web Developer and a registered UK
+          Architect. Recently I had the privilege to collaborate as a Frontend
+          Developer in the development of a{" "}
           <a href="https://stockwised.com/" target="_blank">
             <b>B2B web product</b>
           </a>
