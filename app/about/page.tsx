@@ -35,11 +35,7 @@ export default function About() {
           transition={{ duration: 0.85, delay: 0.1 }}
         >
           <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed once, initially
-              "Technology focussed,\n creatively driven. ",
-              1000,
-            ]}
+            sequence={["Technology focussed,\n creatively driven. ", 1000]}
             speed={{ type: "keyStrokeDelayInMs", value: 75 }}
             repeat={Infinity}
           />
