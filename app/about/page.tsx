@@ -56,7 +56,8 @@ export default function About() {
           <a href="https://www.indexhibit.org/about/" target="_blank">
             <b>CMS</b>
           </a>
-          .
+          . Web developer by passion, architect by training, when I&apos;m not
+          aligning code, I&apos;m aligning columns.
         </motion.p>
         <motion.p
           ref={ref}
@@ -71,7 +72,7 @@ export default function About() {
         >
           These days, I work as a freelance Web Developer and a registered UK
           Architect. Recently I had the privilege to collaborate as a Frontend
-          Developer in the development of a{" "}
+          Developer for a{" "}
           <a href="https://stockwised.com/" target="_blank">
             <b>B2B web product</b>
           </a>
