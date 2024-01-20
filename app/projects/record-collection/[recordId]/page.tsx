@@ -18,9 +18,10 @@ export default async function RecordPage({ params }: Props) {
 
   const albumName = Album.basic_information.title.toLowerCase();
   const artistName = Album.basic_information.artists[0].name.toLowerCase();
+  //for some reason artist name works better as a search term
   const searchTerm = (albumName + " " + artistName).replaceAll(" ", "+");
 
-  const iTunesData = await getItunesData(searchTerm);
+  const iTunesData = await getItunesData(albumName);
 
   if (!iTunesData.results || iTunesData.results.length < 0) {
     throw new Error("No apple music id found");

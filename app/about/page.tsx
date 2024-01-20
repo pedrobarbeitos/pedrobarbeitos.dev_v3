@@ -54,10 +54,8 @@ export default function About() {
           My journey in web development began in 2014 when I started creating
           custom themes for an old school web-based{" "}
           <a href="https://www.indexhibit.org/about/" target="_blank">
-            <b>CMS</b>
+            <b>CMS</b>.
           </a>
-          . Web developer by passion, architect by training, when I&apos;m not
-          aligning code, I&apos;m aligning columns.
         </motion.p>
         <motion.p
           ref={ref}
