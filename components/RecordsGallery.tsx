@@ -1,22 +1,22 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import { useAppContext } from "@/lib/AppContext";
 import Image from "next/image";
 import Link from "next/link";
 import DiscogRecord from "@/app/models/DiscogRecord";
 import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+// import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilterRecords";
 import { SearchInput } from "@/components/SearchInput";
 import { ButtonIconInvertRecords } from "./ButtonIconInvertRecords";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useAppContext } from "@/lib/AppContext";
 
-interface props {
+interface RecordsProps {
   records: DiscogRecord[];
 }
 
-export default function FilmGallery(props: props) {
+export default function RecordsGallery(props: RecordsProps) {
   const { searchedRecords, setSearchedRecords } = useAppContext();
   const [search, setSearch] = useState("");
 

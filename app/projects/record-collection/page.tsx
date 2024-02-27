@@ -1,5 +1,4 @@
 import DiscogResponse from "@/app/models/DiscogResponse";
-
 import RecordsGallery from "@/components/RecordsGallery";
 
 async function getData() {
