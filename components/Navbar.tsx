@@ -15,7 +15,7 @@ export default function Navbar() {
       </div>
       <div className="flex justify-between w-auto gap-2 sm:gap-3 items-center h-6">
         <ButtonLink name="about" route="about" />
-        <ButtonLink name="work" route="projects" />
+        <ButtonLink name="projects" route="projects" />
         <ModeToggle />
       </div>
     </div>
