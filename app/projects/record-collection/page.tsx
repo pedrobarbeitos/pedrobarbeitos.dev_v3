@@ -3,7 +3,8 @@ import RecordsGallery from "@/components/RecordsGallery";
 
 async function getData() {
   const res = await fetch(
-    `https://api.discogs.com/users/vasquiat/collection/folders/0/releases?token=${process.env.NEXT_PUBLIC_DISCOG_TOKEN}&per_page=100&sort=artist`
+    `https://api.discogs.com/users/vasquiat/collection/folders/0/releases?token=${process.env.NEXT_PUBLIC_DISCOG_TOKEN}&per_page=100&sort=artist`,
+    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {

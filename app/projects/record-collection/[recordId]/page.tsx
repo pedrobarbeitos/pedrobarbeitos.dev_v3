@@ -22,7 +22,7 @@ export default async function RecordPage({ params }: Props) {
 
   const iTunesData = await getItunesData(searchTerm);
 
-  // check if you realy need this if statement
+  // check if you realy need this if statement?
   if (!iTunesData.results || iTunesData.results.length < 0) {
     throw new Error("No apple music id found");
   }

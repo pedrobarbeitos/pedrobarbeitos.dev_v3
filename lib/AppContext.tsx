@@ -20,6 +20,7 @@ const AppContext = createContext<AppContextType>({
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [searchedFilms, setSearchedFilms] = useState<TmdbFilm[]>([]);
   const [searchedRecords, setSearchedRecords] = useState<DiscogRecord[]>([]);
+
   // Define any functions or values you want to provide
   const value = {
     searchedFilms,

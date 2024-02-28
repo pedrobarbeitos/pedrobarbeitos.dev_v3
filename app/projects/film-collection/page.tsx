@@ -4,6 +4,7 @@ import FilmGallery from "@/components/FilmGallery";
 
 const options = {
   method: "GET",
+  next: { revalidate: 3600 },
   headers: {
     accept: "application/json",
     Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
