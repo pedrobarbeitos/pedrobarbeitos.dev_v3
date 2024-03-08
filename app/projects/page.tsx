@@ -42,7 +42,7 @@ export default function Projects() {
           projectImage_02={giga_02}
           projectTitle="Shoes E-commerce"
           projectDesc=" A dynamic e-commerce designed to bridge the gap between individual shoe enthusiasts and bulk retailers through a seamless digital experience. It showcases a dual-interface platform, catering to both B2C and B2B audiences. "
-          projectTech={["NextJs", "TypeScript", "SCSS", "AWS", "MongoDB"]}
+          projectTech={["Vite", "JavaScript", "SCSS", "AWS", "MongoDB"]}
           projectLink="https://www.gigashoes.nl"
           projectGitLink="https://github.com/pedrobarbeitos/EcommerceApp"
           projectStatus="Live"
@@ -64,7 +64,7 @@ export default function Projects() {
           projectImage_02={luca_02}
           projectTitle="Photography Gallery"
           projectDesc="A tailor-made website to showcase for a phoptgrapher to present their work in the most striking way possible.  Behind the scenes, a Strapi JS-based CMS offers a user-friendly interface to upload, categorize, and fine-tune the presentation of the works."
-          projectTech={["NextJs", "JavaScript", "SCSS", "Strapi", "AWS"]}
+          projectTech={["Vite", "JavaScript", "SCSS", "Strapi", "AWS"]}
           projectLink="https://www.lucabosco.it"
           projectGitLink="https://github.com/pedrobarbeitos/pedrobarbeitos.dev_v3/tree/main/app/projects/film-collection"
           projectStatus="Live"
