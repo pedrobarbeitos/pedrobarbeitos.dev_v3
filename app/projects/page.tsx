@@ -2,6 +2,10 @@ import record_collection_01 from "/public/record_collection_01.jpg";
 import record_collection_02 from "/public/record_collection_02.jpg";
 import film_collection_01 from "/public/film_collection_01.jpg";
 import film_collection_02 from "/public/film_collection_02.jpg";
+import giga_01 from "/public/giga_01.jpg";
+import giga_02 from "/public/giga_02.jpg";
+import luca_01 from "/public/luca_01.jpg";
+import luca_02 from "/public/luca_02.jpg";
 import architecture_practice_01 from "/public/architecture_practice_01.jpg";
 import architecture_practice_02 from "/public/architecture_practice_02.jpg";
 import temples_01 from "/public/temples_01.jpg";
@@ -34,6 +38,17 @@ export default function Projects() {
         />
 
         <ProjectCard
+          projectImage_01={giga_01}
+          projectImage_02={giga_02}
+          projectTitle="Shoes E-commerce"
+          projectDesc=" A dynamic e-commerce designed to bridge the gap between individual shoe enthusiasts and bulk retailers through a seamless digital experience. It showcases a dual-interface platform, catering to both B2C and B2B audiences. "
+          projectTech={["NextJs", "TypeScript", "SCSS", "AWS", "MongoDB"]}
+          projectLink="https://www.gigashoes.nl"
+          projectGitLink="https://github.com/pedrobarbeitos/EcommerceApp"
+          projectStatus="Live"
+        />
+
+        <ProjectCard
           projectImage_01={film_collection_01}
           projectImage_02={film_collection_02}
           projectTitle="Curated film collection"
@@ -43,6 +58,18 @@ export default function Projects() {
           projectGitLink="https://github.com/pedrobarbeitos/pedrobarbeitos.dev_v3/tree/main/app/projects/film-collection"
           projectStatus="Live"
         />
+
+        <ProjectCard
+          projectImage_01={luca_01}
+          projectImage_02={luca_02}
+          projectTitle="Photography Gallery"
+          projectDesc="A tailor-made website to showcase for a phoptgrapher to present their work in the most striking way possible.  Behind the scenes, a Strapi JS-based CMS offers a user-friendly interface to upload, categorize, and fine-tune the presentation of the works."
+          projectTech={["NextJs", "JavaScript", "SCSS", "Strapi", "AWS"]}
+          projectLink="https://www.lucabosco.it"
+          projectGitLink="https://github.com/pedrobarbeitos/pedrobarbeitos.dev_v3/tree/main/app/projects/film-collection"
+          projectStatus="Live"
+        />
+
         <ProjectCard
           projectImage_01={temples_01}
           projectImage_02={temples_02}

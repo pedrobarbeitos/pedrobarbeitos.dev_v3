@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TmdbFilm from "../../../models/TmdbFilm";
 import FilmCard from "@/components/FilmCard";
 

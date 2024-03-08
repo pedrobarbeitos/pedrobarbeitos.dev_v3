@@ -92,8 +92,6 @@ export default function RecordsGallery(props: RecordsProps) {
                       src={record.basic_information.cover_image}
                       alt={record.basic_information.title}
                       fill
-                      placeholder="blur"
-                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPM+gkAAdMBZdytAagAAAAASUVORK5CYII="
                       sizes="(max-width: 150px) 100vw"
                       priority
                     />

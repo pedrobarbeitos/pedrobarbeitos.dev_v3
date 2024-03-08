@@ -9,7 +9,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { SelectFilter } from "@/components/SelectFilterFilms";
 import { SearchInput } from "@/components/SearchInput";
 import { ButtonIconInvertFilms } from "./ButtonIconInvertFilms";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useAppContext } from "@/lib/AppContext";
 
 interface props {

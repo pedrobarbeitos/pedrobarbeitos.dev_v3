@@ -1,5 +1,4 @@
 import TmdbResponse from "../../models/TmdbResponse";
-
 import FilmGallery from "@/components/FilmGallery";
 
 const options = {
