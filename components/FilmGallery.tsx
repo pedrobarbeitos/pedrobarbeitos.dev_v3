@@ -30,6 +30,8 @@ export default function FilmGallery(props: props) {
     film.title.toLowerCase().includes(search.toLowerCase())
   );
 
+  console.log(searchedFilms);
+
   return (
     <motion.section
       className="flex flex-wrap justify-center w-full mb-8 leading-none"

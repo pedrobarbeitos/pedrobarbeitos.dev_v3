@@ -60,17 +60,6 @@ export default function Projects() {
         />
 
         <ProjectCard
-          projectImage_01={luca_01}
-          projectImage_02={luca_02}
-          projectTitle="Photography Gallery"
-          projectDesc="A tailor-made website for a photographer to present their work in the most striking way possible.  Behind the scenes, a Strapi JS-based CMS offers a user-friendly interface to upload, categorize, and fine-tune the presentation of the works."
-          projectTech={["Vite", "JavaScript", "SCSS", "Strapi", "AWS"]}
-          projectLink="https://lucabosco.it/commission-index"
-          projectGitLink="https://github.com/pedrobarbeitos/pedrobarbeitos.dev_v3/tree/main/app/projects/film-collection"
-          projectStatus="Live"
-        />
-
-        <ProjectCard
           projectImage_01={temples_01}
           projectImage_02={temples_02}
           projectTitle="Temples"
